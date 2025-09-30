@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Silos - Registro</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', Arial, sans-serif;
+      background: #f5f7fa;
+      padding: 20px;
+      margin: 0;
+    }
+
+    /* Encabezado */
+    header {
+      font-size: 28px;
+      font-weight: bold;
+      margin-bottom: 30px;
+      color: #222;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .container {
+      display: flex;
+      justify-content: space-around;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .column h3 {
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 12px;
+      font-weight: 500;
+    }
+
+    input {
+      width: 120px;
+      padding: 5px;
+      margin-top: 4px;
+      border: 2px solid darkred;
+      outline: 1px solid black;
+      border-radius: 6px;
+      font-size: 14px;
+    }
+
+    .fecha {
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+
+    .fecha input {
+      width: 60px;
+      text-align: center;
+    }
+
+    button {
+      display: block;
+      margin: 30px auto 0 auto;
+      padding: 10px 20px;
+      font-size: 16px;
+      background: #0077cc;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #005fa3;
+    }
+  </style>
+</head>
+<body>
+
+  <header>#Alimentos Doña Mara</header>
+  <h2>Registro de Silos</h2>
+
+  <!-- Campo Fecha -->
+  <div class="fecha">
+    <label>Día<br>
+      <input type="text" id="dia" pattern="[0-9]{1,2}" maxlength="2" required>
+    </label>
+    <label>Mes<br>
+      <input type="text" id="mes" pattern="[0-9]{1,2}" maxlength="2" required>
+    </label>
+    <label>Año<br>
+      <input type="text" id="anio" pattern="[0-9]{4}" maxlength="4" required>
+    </label>
+  </div>
+
+  <form id="silosForm">
+    <div class="container">
+      
+      <!-- Columna Izquierda -->
+      <div class="column">
+        <h3>Silos 400</h3>
+        <label>Silo 401:
+          <input type="text" id="silo401" pattern="[0-9,./\-_]*" required>
+        </label>
+        <label>Silo 402:
+          <input type="text" id="silo402" pattern="[0-9,./\-_]*" required>
+        </label>
+        <label>Silo 403:
+          <input type="text" id="silo403" pattern="[0-9,./\-_]*" required>
+        </label>
+        <label>Silo 404:
+          <input type="text" id="silo404" pattern="[0-9,./\-_]*" required>
+        </label>
+        <label>Silo 405:
+          <input type="text" id="silo405" pattern="[0-9,./\-_]*" required>
+        </label>
+        <label>Silo 406:
+          <input type="text" id="silo406" pattern="[0-9,./\-_]*" required>
+        </label>
+      </div>
+
+      <!-- Columna Centro -->
+      <div class="column">
+        <h3>Silos 500</h3>
+        <label>Silo 501:
+          <input type="text" id="silo501" pattern="[0-9,./\-_]*" required>
+        </label>
+        <label>Silo 502:
+          <input type="text" id="silo502" pattern="[0-9,./\-_]*" required>
+        </label>
+      </div>
+
+      <!-- Columna Derecha -->
+      <div class="column">
+        <h3>Silos 600</h3>
+        <label>Silo 601:
+          <input type="text" id="silo601" pattern="[0-9,./\-_]*" required>
+        </label>
+        <label>Silo 602:
+          <input type="text" id="silo602" pattern="[0-9,./\-_]*" required>
+        </label>
+      </div>
+
+    </div>
+
+    <button type="submit">Aceptar</button>
+  </form>
+
+  <script>
+    document.getElementById('silosForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      alert('Datos capturados correctamente. Aquí luego se enviarán al Google Apps Script.');
+    });
+  </script>
+
+</body>
+</html>
