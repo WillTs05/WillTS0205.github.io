@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Silos - Registro</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f7fa;
+      padding: 20px;
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .container {
+      display: flex;
+      justify-content: space-around;
+      gap: 20px;
+    }
+    .column {
+      background: white;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+      flex: 1;
+    }
+    .column h3 {
+      text-align: center;
+      margin-bottom: 15px;
+    }
+    label {
+      display: block;
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+    input {
+      width: 100%;
+      padding: 6px;
+      margin-top: 4px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 14px;
+    }
+    button {
+      display: block;
+      margin: 30px auto 0 auto;
+      padding: 10px 20px;
+      font-size: 16px;
+      background: #0077cc;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #005fa3;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Registro de Silos</h2>
+
+  <form id="silosForm">
+    <div class="container">
+      
+      <!-- Columna Izquierda -->
+      <div class="column">
+        <h3>Silos 400</h3>
+        <label>Silo 401:
+          <input type="text" id="silo401" pattern="[0-9,./\-_]*" required>
+        </label>
+        <label>Silo 402:
+          <input type="text" id="silo402" pattern="[0-9,./\-_]*" required>
+        </label>
+        <label>Silo 403:
+          <input type="text" id="silo403" pattern="[0-9,./\-_]*" required>
+        </label>
+        <label>Silo 404:
+          <input type="text" id="silo404" pattern="[0-9,./\-_]*" required>
+        </label>
+        <label>Silo 405:
+          <input type="text" id="silo405" pattern="[0-9,./\-_]*" required>
+        </label>
+        <label>Silo 406:
+          <input type="text" id="silo406" pattern="[0-9,./\-_]*" required>
+        </label>
+      </div>
+
+      <!-- Columna Centro -->
+      <div class="column">
+        <h3>Silos 500</h3>
+        <label>Silo 501:
+          <input type="text" id="silo501" pattern="[0-9,./\-_]*" required>
+        </label>
+        <label>Silo 502:
+          <input type="text" id="silo502" pattern="[0-9,./\-_]*" required>
+        </label>
+      </div>
+
+      <!-- Columna Derecha -->
+      <div class="column">
+        <h3>Silos 600</h3>
+        <label>Silo 601:
+          <input type="text" id="silo601" pattern="[0-9,./\-_]*" required>
+        </label>
+        <label>Silo 602:
+          <input type="text" id="silo602" pattern="[0-9,./\-_]*" required>
+        </label>
+      </div>
+
+    </div>
+
+    <button type="submit">Aceptar</button>
+  </form>
+
+  <script>
+    document.getElementById('silosForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      alert('Datos capturados correctamente. Aquí luego se enviarán al Google Apps Script.');
+    });
+  </script>
+
+</body>
+</html>
