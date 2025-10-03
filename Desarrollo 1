@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Silos - Registro</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', Arial, sans-serif;
+      background: #f5f7fa;
+      padding: 20px;
+      margin: 0;
+    }
+
+    /* Encabezado */
+    header {
+      font-size: 36px;
+      font-weight: bold;
+      margin-bottom: 30px;
+      color: white;
+      -webkit-text-stroke: 1px black;
+      text-shadow: 1px 1px 0 darkred, -1px -1px 0 darkred;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .container {
+      display: flex;
+      justify-content: space-around;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .column h3 {
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 12px;
+      font-weight: 500;
+    }
+
+    input {
+      width: 120px;
+      padding: 5px;
+      margin-top: 4px;
+      border: 2px solid #003366; /* azul oscuro */
+      outline: 1px solid black;
+      border-radius: 6px;
+      font-size: 14px;
+    }
+
+    input.error {
+      border: 2px solid red;
+      outline: none;
+    }
+
+    select {
+      margin-left: 8px;
+      padding: 5px;
+      border-radius: 6px;
+      border: 2px solid #003366;
+      outline: 1px solid black;
+      background: white;
+      font-size: 14px;
+      color: black; /* selects en negro */
+    }
+
+    .fecha {
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+
+    .fecha input {
+      width: 60px;
+      text-align: center;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 30px;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    #submitBtn {
+      background: #0077cc;
+    }
+
+    #submitBtn:disabled {
+      background: gray;
+      cursor: not-allowed;
+    }
+
+    #submitBtn:hover:enabled {
+      background: #005fa3;
+    }
+
+    #resetBtn {
+      background: #cc0000;
+    }
+
+    #resetBtn:hover {
+      background: #990000;
+    }
+  </style>
+</head>
+<body>
+
+  <header>Alimentos Safiro</header>
+  <h2>Registro de Silos</h2>
+
+  <!-- Campo Fecha -->
+  <div class="fecha">
+    <label>Día<br>
+      <input type="text" id="dia" pattern="^[0-9]{1,2}$" maxlength="2" required>
+    </label>
+    <label>Mes<br>
+      <input type="text" id="mes" pattern="^[0-9]{1,2}$" maxlength="2" required>
+    </label>
+    <label>Año<br>
+      <input type="text" id="anio" pattern="^[0-9]{4}$" maxlength="4" required>
+    </label>
+  </div>
+
+  <form id="silosForm">
+    <div class="container">
+      
+      <!-- Columna Izquierda -->
+      <div class="column">
+        <h3>Silos 400</h3>
+        <label>Silo 401:
+          <input type="text" id="silo401" data-max="23" required>
+          <select>
+            <option value="">Tipo</option>
+            <option>CWRS</option>
+            <option>HRW</option>
+            <option>CESRW</option>
+            <option>HRW PATENTE</option>
+            <option>CWRS PATENTE</option>
+          </select>
+        </label>
+        <label>Silo 402:
+          <input type="text" id="silo402" data-max="23" required>
+          <select>
+            <option value="">Tipo</option>
+            <option>CWRS</option>
+            <option>HRW</option>
+            <option>CESRW</option>
+            <option>HRW PATENTE</option>
+            <option>CWRS PATENTE</option>
+          </select>
+        </label>
+        <label>Silo 403:
+          <input type="text" id="silo403" data-max="23" required>
+          <select>
+            <option value="">Tipo</option>
+            <option>CWRS</option>
+            <option>HRW</option>
+            <option>CESRW</option>
+            <option>HRW PATENTE</option>
+            <option>CWRS PATENTE</option>
+          </select>
+        </label>
+        <label>Silo 404:
+          <input type="text" id="silo404" data-max="23" required>
+          <select>
+            <option value="">Tipo</option>
+            <option>CWRS</option>
+            <option>HRW</option>
+            <option>CESRW</option>
+            <option>HRW PATENTE</option>
+            <option>CWRS PATENTE</option>
+          </select>
+        </label>
+        <label>Silo 405:
+          <input type="text" id="silo405" data-max="23" required>
+          <select>
+            <option value="">Tipo</option>
+            <option>CWRS</option>
+            <option>HRW</option>
+            <option>CESRW</option>
+            <option>HRW PATENTE</option>
+            <option>CWRS PATENTE</option>
+          </select>
+        </label>
+        <label>Silo 406:
+          <input type="text" id="silo406" data-max="23" required>
+          <select>
+            <option value="">Tipo</option>
+            <option>CWRS</option>
+            <option>HRW</option>
+            <option>CESRW</option>
+            <option>HRW PATENTE</option>
+            <option>CWRS PATENTE</option>
+          </select>
+        </label>
+      </div>
+
+      <!-- Columna Centro -->
+      <div class="column">
+        <h3>Silos 500</h3>
+        <label>Silo 501:
+          <input type="text" id="silo501" data-max="7" required>
+          <select>
+            <option value="">Tipo</option>
+            <option>CWRS</option>
+            <option>HRW</option>
+            <option>CESRW</option>
+            <option>HRW PATENTE</option>
+            <option>CWRS PATENTE</option>
+          </select>
+        </label>
+        <label>Silo 502:
+          <input type="text" id="silo502" data-max="7" required>
+          <select>
+            <option value="">Tipo</option>
+            <option>CWRS</option>
+            <option>HRW</option>
+            <option>CESRW</option>
+            <option>HRW PATENTE</option>
+            <option>CWRS PATENTE</option>
+          </select>
+        </label>
+      </div>
+
+      <!-- Columna Derecha -->
+      <div class="column">
+        <h3>Silos 600</h3>
+        <label>Silo 601:
+          <input type="text" id="silo601" data-max="7" required>
+          <select>
+            <option value="">Tipo</option>
+            <option>Panadera</option>
+            <option>Todo uso</option>
+            <option>HRW Patente</option>
+            <option>CWRS Patente</option>
+          </select>
+        </label>
+        <label>Silo 602:
+          <input type="text" id="silo602" data-max="7" required>
+          <select>
+            <option value="">Tipo</option>
+            <option>Panadera</option>
+            <option>Todo uso</option>
+            <option>HRW Patente</option>
+            <option>CWRS Patente</option>
+          </select>
+        </label>
+      </div>
+
+    </div>
+
+    <div class="buttons">
+      <button type="submit" id="submitBtn" disabled>Aceptar</button>
+      <button type="button" id="resetBtn">Borrar todo</button>
+    </div>
+  </form>
+
+  <script>
+    const form = document.getElementById('silosForm');
+    const submitBtn = document.getElementById('submitBtn');
+    const resetBtn = document.getElementById('resetBtn');
+
+    function validateForm() {
+      let allValid = true;
+      const inputs = form.querySelectorAll('input[required][data-max]');
+      const selects = form.querySelectorAll('select');
+
+      inputs.forEach(input => {
+        const max = parseFloat(input.dataset.max);
+        const value = parseFloat(input.value.replace(',', '.'));
+        if (isNaN(value) || value > max) {
+          input.classList.add('error');
+          allValid = false;
+        } else {
+          input.classList.remove('error');
+        }
+      });
+
+      selects.forEach(select => {
+        if (select.value === "") {
+          allValid = false;
+        }
+      });
+
+      submitBtn.disabled = !allValid;
+    }
+
+    form.addEventListener('input', validateForm);
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      alert('✅ Datos validados y capturados correctamente. Aquí luego se enviarán al Google Apps Script.');
+    });
+
+    resetBtn.addEventListener('click', () => {
+      form.reset();
+      submitBtn.disabled = true;
+      form.querySelectorAll('input').forEach(input => input.classList.remove('error'));
+    });
+  </script>
+
+</body>
+</html>
